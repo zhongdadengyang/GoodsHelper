@@ -1,0 +1,36 @@
+header ul.primary-nav li a {
+	font-size: 16px;
+	
+}
+
+header {
+	/*border-bottom: solid 1px rgba(100, 100, 100, 0.2);*/
+}
+
+header a {
+	font-size: 18px;
+}
+
+h1 {
+	font-size: 28px;
+}
+
+header {
+	padding: 23px 0;
+}
+
+header a {
+	text-transform: none;
+}
+
+.btn {
+	text-transform: none;
+}
+
+.navbar-inverse {
+	background-color: rgba(28, 54, 83, 0.4);
+}
+
+/*section.features, section.blog-intro, section.blog {
+	background-color: #252830;
+}*/
