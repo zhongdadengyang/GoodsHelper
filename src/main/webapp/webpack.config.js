@@ -5,6 +5,7 @@ var CleanWebpackPlugin = require('clean-webpack-plugin');
 var WebpackDevServer = require('webpack-dev-server');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+//var WebpackDevMiddleware = require("webpack-dev-middleware");
 
 module.exports = {
     entry: './src/index.js',
@@ -20,17 +21,16 @@ module.exports = {
             template: 'src/index.html',
             inject: true
         }),
-        new ExtractTextPlugin("styles/[name].[hash].css"),
-        new webpack.optimize.OccurenceOrderPlugin(true),
+        new ExtractTextPlugin("[name].[hash].css"),
+        // new webpack.optimize.OccurenceOrderPlugin(true),
         // new webpack.optimize.UglifyJsPlugin({
         //     compress: true,
-        //     mangle: true
-        // })
-        // new CopyWebpackPlugin([{
-        //     from: 'src/assets/favicon.ico'
-        // }, {
-        //     from: './urlrewrite.xml'
-        // }])
+        //     mangle: false
+        // }),
+        new CopyWebpackPlugin([{
+            from: 'src/assets/images',
+            to: './images'
+        }])
     ],
     module: {
         preLoaders: [
@@ -48,14 +48,13 @@ module.exports = {
         }, {
             test: /\.css$|\.less$/,
             loader: ExtractTextPlugin.extract('style', 'css-loader?sourceMap')
-        }, {
-            test: /\.js$/,
-            exclude: /(node_modules|bower_components)/,
-            loader: 'babel',
-            query: {
-                presets: ['es2015', 'react']
-            }
         }]
+    },
+    node: {
+        console: 'empty',
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty'
     }
 };
 

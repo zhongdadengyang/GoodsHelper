@@ -1,0 +1,20 @@
+<div class="dashhead m-t-md"></div>
+<div class="col-md-2 sidebar">
+    <nav class="sidebar-nav">
+        <div class="collapse nav-toggleable-sm" id="nav-toggleable-sm">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="nav-header">任务管理</li>
+                <li ui-sref-active="active">
+                    <a ui-sref="task.myList">我的复制任务</a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="task.add"><i class="fa fa-plus"></i> 新建复制任务</a>
+                </li>
+            </ul>
+            <hr class="visible-xs m-t">
+        </div>
+    </nav>
+</div>
+<div class="col-md-10 content">
+    <div ui-view></div>
+</div>

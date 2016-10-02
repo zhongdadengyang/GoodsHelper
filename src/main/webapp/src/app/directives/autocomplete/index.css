@@ -1,0 +1,11 @@
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+	border: 1px solid #ADD8E6/*{borderColorActive}*/;
+	background: #ADD8E6/*{bgColorActive}*/ /*{bgImgUrlActive}*/ /*{bgActiveXPos}*/ /*{bgActiveYPos}*/ /*{bgActiveRepeat}*/;
+	font-weight: normal/*{fwDefault}*/;
+	color: #ffffff/*{fcActive}*/;
+}
